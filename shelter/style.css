@@ -449,6 +449,11 @@ h2 {
   max-width: 89%;
 }
 
+.bankCardNumber:hover a{
+  color:#9c7c7c;
+  transition: 200ms;
+}
+
 .bankCardNumber a {
   padding-left: 15px;
   text-decoration: none;
@@ -509,9 +514,15 @@ footer a {
 .footerPuppy {
   position: relative;
   top: 10px;
+  height: 310px;
 }
 
 footer {
   display: flex;
   justify-content: center;
+}
+
+.email:hover a {
+  color:#9c7c7c;
+  transition: 200ms;
 }
