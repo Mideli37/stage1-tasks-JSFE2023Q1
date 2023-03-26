@@ -375,3 +375,78 @@ h2 {
   max-width: 30%;
   padding: 50px 0px;
 }
+
+#donation {
+  background: rgba(246, 246, 246, 1);
+}
+#donation .wrapper {
+  justify-content: center;
+  gap: 11px;
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
+
+.donationInfo {
+  display: flex;
+  max-width: 30%;
+  flex-direction: column;
+}
+
+.donationInfo p {
+  padding-top: 8px;
+  font-family: 'Arial';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #b2b2b2;
+}
+
+.donationInfo h2 {
+  text-align: start;
+  max-width: 89%;
+}
+
+#donation .donationDog {
+  height: 261px;
+  position: relative;
+  top: 11px;
+  left: -19px;
+}
+
+.donationInfo span {
+  padding-top: 20px;
+  padding-bottom: 19px;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.bankCardNumber {
+  background: #f1cdb3;
+  border-radius: 9px;
+  padding: 10px 15px;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  max-width: 89%;
+}
+
+.bankCardNumber a {
+  padding-left: 15px;
+  text-decoration: none;
+  color: #545454;
+}
