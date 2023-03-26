@@ -510,3 +510,8 @@ footer a {
   position: relative;
   top: 10px;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+}
