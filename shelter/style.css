@@ -9,6 +9,10 @@ body {
   overflow-y: overlay;
 }
 
+section {
+  display: flex;
+  justify-content: center;
+}
 header {
   width: 100%;
   position: absolute;
@@ -383,7 +387,7 @@ h2 {
   justify-content: center;
   gap: 11px;
   padding-top: 80px;
-  padding-bottom: 90px;
+  padding-bottom: 88px;
 }
 
 .donationInfo {
@@ -449,4 +453,60 @@ h2 {
   padding-left: 15px;
   text-decoration: none;
   color: #545454;
+}
+
+footer {
+  overflow-y: hidden;
+  height: 350px;
+  background-size: cover;
+  background-image: url(assets/footer-gradient-background.png);
+}
+
+footer .wrapper {
+  flex-direction: row;
+  color: rgba(255, 255, 255, 1);
+}
+
+footer h2 {
+  padding-top: 27px;
+  padding-bottom: 35px;
+  max-width: 65%;
+  text-align: start;
+  color: white;
+}
+
+footer span,
+footer a {
+  text-decoration: none;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
+}
+
+.contacts div {
+  margin-bottom: 40px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.contacts {
+  max-width: 36.5%;
+}
+
+.address div {
+  max-width: 80%;
+  margin-bottom: 30px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.footerPuppy {
+  position: relative;
+  top: 10px;
 }
