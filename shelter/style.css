@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0 auto;
   font-family: 'Arial';
@@ -18,6 +22,11 @@ header {
   position: absolute;
   display: flex;
   justify-content: center;
+}
+
+header a {
+  text-decoration: none;
+  color: rgba(205, 205, 205, 1);
 }
 
 .wrapper {
@@ -61,6 +70,11 @@ nav ul {
   justify-content: space-between;
   gap: 36px;
 }
+
+nav a:hover {
+  color: rgba(250, 250, 250, 1);
+  transition: 200ms;
+}
 nav li {
   display: inline-block;
   cursor: pointer;
@@ -77,11 +91,11 @@ nav li:hover {
   color: rgba(250, 250, 250, 1);
 }
 
-nav li:active,
-.aboutLI {
+nav a:active,
+.aboutLI a {
   color: rgba(250, 250, 250, 1);
   border-bottom: solid 3px #f1cdb3;
-  transition: 200ms;
+  transition: 100ms;
 }
 
 h1 {
@@ -449,8 +463,8 @@ h2 {
   max-width: 89%;
 }
 
-.bankCardNumber:hover a{
-  color:#9c7c7c;
+.bankCardNumber:hover a {
+  color: #9c7c7c;
   transition: 200ms;
 }
 
@@ -522,7 +536,8 @@ footer {
   justify-content: center;
 }
 
-.email:hover a {
-  color:#9c7c7c;
+.email:hover a,
+.phone:hover a {
+  color: #9c7c7c;
   transition: 200ms;
 }
