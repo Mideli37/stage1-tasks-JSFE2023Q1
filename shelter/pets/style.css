@@ -284,6 +284,7 @@ footer a {
 
 footer a:hover {
   color: #a05713;
+  transition: all 200ms;
 }
 .contacts {
   display: flex;

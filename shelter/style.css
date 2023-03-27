@@ -478,24 +478,36 @@ footer {
   overflow-y: hidden;
   height: 350px;
   background-size: cover;
-  background-image: url(assets/footer-gradient-background.png);
+  background-image: url(./assets/footer-gradient-background.png);
 }
 
 footer .wrapper {
+  display: flex;
   flex-direction: row;
-  color: rgba(255, 255, 255, 1);
 }
 
 footer h2 {
+  margin: 0;
   padding-top: 27px;
   padding-bottom: 35px;
   max-width: 65%;
   text-align: start;
   color: white;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  /* or 45px */
+
+  letter-spacing: 0.06em;
 }
 
-footer span,
 footer a {
+  gap: 20px;
+  display: block;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   font-family: 'Georgia';
   font-style: normal;
@@ -506,23 +518,18 @@ footer a {
   color: #f1cdb3;
 }
 
-.contacts div {
-  margin-bottom: 40px;
-  gap: 20px;
-  display: flex;
-  align-items: center;
+footer a:hover {
+  color: #a05713;
+  transition: all 200ms;
 }
-
 .contacts {
+  display: flex;
+  flex-direction: column;
   max-width: 36.5%;
 }
 
-.address div {
-  max-width: 80%;
-  margin-bottom: 30px;
-  gap: 20px;
-  display: flex;
-  align-items: center;
+.email {
+  padding-bottom: 40px;
 }
 
 .footerPuppy {
@@ -531,13 +538,11 @@ footer a {
   height: 310px;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
+.address h2 {
+  padding-bottom: 30px;
 }
 
-.email:hover a,
-.phone:hover a {
-  color: #9c7c7c;
-  transition: 200ms;
+.firstAddress {
+  max-width: 64%;
+  padding-bottom: 30px;
 }
