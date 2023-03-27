@@ -137,6 +137,7 @@ h1 {
 }
 
 .card:hover {
+  background: #ffffff;
   scale: 1.03;
   transition: 200ms;
 }

@@ -279,6 +279,7 @@ h2 {
 .card:hover {
   scale: 1.03;
   transition: 200ms;
+  background: #ffffff;
 }
 
 .card span {
