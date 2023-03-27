@@ -121,9 +121,8 @@ h1 {
 #start {
   display: flex;
   justify-content: center;
-  background-image: url(./assets/startSectionBackground.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url(./assets/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
+  background-repeat: repeat;
   padding-top: 90px;
 }
 
@@ -274,11 +273,13 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 9px;
 }
 
 .card:hover {
   scale: 1.03;
   transition: 200ms;
+  background: #ffffff;
 }
 
 .card span {
@@ -480,7 +481,7 @@ footer {
   overflow-y: hidden;
   height: 350px;
   background-size: cover;
-  background-image: url(./assets/footer-gradient-background.png);
+  background: url(./assets/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 
 footer .wrapper {
