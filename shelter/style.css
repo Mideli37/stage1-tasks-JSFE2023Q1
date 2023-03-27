@@ -121,7 +121,7 @@ h1 {
 #start {
   display: flex;
   justify-content: center;
-  background-image: url(assets/startSectionBackground.png);
+  background-image: url(./assets/startSectionBackground.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 90px;
