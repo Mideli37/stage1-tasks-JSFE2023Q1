@@ -475,6 +475,8 @@ h2 {
 }
 
 footer {
+  display: flex;
+  justify-content: center;
   overflow-y: hidden;
   height: 350px;
   background-size: cover;
