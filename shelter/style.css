@@ -549,3 +549,145 @@ footer a:hover {
   max-width: 64%;
   padding-bottom: 30px;
 }
+
+
+@media (width < 1280px) {
+  .wrapper{
+    padding: 30px 30px 0px 30px;
+  }
+
+  #start .wrapper {
+    padding-top: 61px;
+    flex-direction: column;
+    align-items: center;
+  } 
+
+  .aboutContent {
+    max-width: 65%;
+    align-items: center;
+  }
+
+  h1 {
+    align-self: start;
+  }
+
+  .startImage {
+    padding-top: 80px;
+    height: 593px;
+    align-self: end;
+  }
+
+  #about .wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 57px;
+    gap: 63px;
+  }
+
+  .aboutImg {
+    height: 408px;
+    order: 4;
+  }
+
+  .aboutInfo {
+    max-width: 61%;
+    padding-top: 10px;
+  }
+
+  #ourFriends h2 {
+    max-width: 60%;
+  }
+
+  .card:nth-child(3) {
+    display: none;
+  }
+
+  .cardsWrapper {
+    padding-top: 3px;
+    gap: 41px;
+  }
+
+  .slider {
+    gap: 11px
+  }
+
+  #help h2 {
+    max-width: 50%;
+  }
+
+  .iconsWrapper{
+    max-width: 88%;
+    display: flex;
+    justify-content: space-between;
+
+        gap: 55px 0px 
+  }
+
+  .iconCard {
+    width: 26%;
+  }
+
+  #donation .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #donation .donationDog {
+    position: unset;
+    padding-top: 38px;
+    padding-bottom: 12px;
+    order: 4;
+  }
+  .donationInfo {
+    max-width: 54%;
+  }
+
+  .bankCardNumber {
+    margin-right: 30px;
+  }
+
+  footer .wrapper {
+    flex-wrap: wrap;
+    height: unset;
+    overflow-y: unset;
+    justify-content: center;
+    padding-left: 36px;
+  }
+
+  footer{
+    flex-wrap: wrap;
+    height: unset;
+    overflow-y: unset;
+  }
+
+  .contacts {
+    max-width: 45%;
+padding-left: 29px;
+padding-bottom: 65px;
+  }
+
+
+  footer h2 {
+    padding-top: 0;
+    max-width: 90%;
+    padding-bottom: 39px;
+    margin: 0;
+  }
+
+  .address{
+    max-width: 48%;
+    padding-left: 20px;
+    padding-bottom: 65px;
+  }
+
+  .firstAddress {
+    max-width: 100%;
+    padding-bottom: 36px;
+  }
+
+  .footerPuppy {
+    display: block;
+    margin: auto;
+    position: unset;
+  }
+}
