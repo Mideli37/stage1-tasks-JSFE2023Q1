@@ -98,6 +98,9 @@ nav a:active,
   transition: 100ms;
 }
 
+.burger {
+  display: none;
+}
 h1 {
   margin: 0;
   max-width: 325px;
@@ -121,7 +124,10 @@ h1 {
 #start {
   display: flex;
   justify-content: center;
-  background: url(./assets/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
+  background: url(./assets/noise_transparent@2x.png),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%)
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    #211f20;
   background-repeat: repeat;
   padding-top: 90px;
 }
@@ -481,7 +487,8 @@ footer {
   overflow-y: hidden;
   height: 350px;
   background-size: cover;
-  background: url(./assets/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  background: url(./assets/noise_transparent@2x.png),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
 }
 
 footer .wrapper {
@@ -550,9 +557,8 @@ footer a:hover {
   padding-bottom: 30px;
 }
 
-
 @media (width < 1280px) {
-  .wrapper{
+  .wrapper {
     padding: 30px 30px 0px 30px;
   }
 
@@ -560,7 +566,7 @@ footer a:hover {
     padding-top: 61px;
     flex-direction: column;
     align-items: center;
-  } 
+  }
 
   .aboutContent {
     max-width: 65%;
@@ -608,19 +614,19 @@ footer a:hover {
   }
 
   .slider {
-    gap: 11px
+    gap: 11px;
   }
 
   #help h2 {
     max-width: 50%;
   }
 
-  .iconsWrapper{
+  .iconsWrapper {
     max-width: 88%;
     display: flex;
     justify-content: space-between;
 
-        gap: 55px 0px 
+    gap: 55px 0px;
   }
 
   .iconCard {
@@ -654,7 +660,7 @@ footer a:hover {
     padding-left: 36px;
   }
 
-  footer{
+  footer {
     flex-wrap: wrap;
     height: unset;
     overflow-y: unset;
@@ -662,10 +668,9 @@ footer a:hover {
 
   .contacts {
     max-width: 45%;
-padding-left: 29px;
-padding-bottom: 65px;
+    padding-left: 29px;
+    padding-bottom: 65px;
   }
-
 
   footer h2 {
     padding-top: 0;
@@ -674,7 +679,7 @@ padding-bottom: 65px;
     margin: 0;
   }
 
-  .address{
+  .address {
     max-width: 48%;
     padding-left: 20px;
     padding-bottom: 65px;
@@ -689,5 +694,266 @@ padding-bottom: 65px;
     display: block;
     margin: auto;
     position: unset;
+  }
+}
+
+@media (width < 768px) {
+  nav {
+    display: none;
+  }
+
+  .burger,
+  .burger::before,
+  .burger::after {
+    background-color: #f1cdb3;
+    display: block;
+    height: 2px;
+    width: 30px;
+  }
+
+  .burger::before {
+    position: relative;
+    bottom: 10px;
+    content: '';
+  }
+
+  .burger::after {
+    content: '';
+    position: relative;
+    bottom: -8px;
+  }
+
+  .wrapper {
+    padding: 30px 10px 0;
+  }
+
+  header .wrapper {
+    padding: 30px 20px 0;
+  }
+
+  .burger {
+    margin-top: 29px;
+  }
+
+  h1 {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    max-width: 77%;
+    align-self: unset;
+    letter-spacing: 0.06em;
+  }
+
+  .aboutContent {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .startImage {
+    height: 272px;
+    padding-top: 85px;
+    align-self: unset;
+    position: relative;
+    right: -21px;
+  }
+
+  #about .wrapper {
+    padding-top: 20px;
+    gap: 0;
+    padding-bottom: 43px;
+  }
+  #about h2,
+  #ourFriends h2,
+  #help h2,
+  #donation h2,
+  footer h2 {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    max-width: 100%;
+    align-self: unset;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .aboutInfo {
+    padding-top: 6px;
+    align-items: center;
+    max-width: 90%;
+  }
+
+  #about p {
+    text-align: justify;
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+
+  .aboutImg {
+    padding-top: 29px;
+    height: 354px;
+  }
+
+  #ourFriends .wrapper {
+    padding-top: 40px;
+  }
+
+  .card:nth-child(2) {
+    display: none;
+  }
+
+  .cardsWrapper {
+    order: -1;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .slider {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 39px;
+    gap: 21px;
+  }
+
+  .arrowPrevious {
+    margin-right: 29px;
+  }
+
+  .arrowNext {
+    margin-left: 29px;
+  }
+
+  .rest {
+    margin-top: 42px;
+    margin-bottom: 42px;
+  }
+
+  #help h2 {
+    padding-top: 12px;
+    max-width: 80%;
+    padding-bottom: 33px;
+  }
+
+  .iconsWrapper {
+    max-width: 88%;
+    display: flex;
+    justify-content: space-between;
+
+    gap: 29px 0px;
+  }
+
+  .iconCard {
+    width: 45%;
+  }
+
+  .iconCard span {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    /* identical to box height, or 17px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+
+  .iconCard img {
+    height: 50px;
+    padding-bottom: 21px;
+  }
+
+  #help .wrapper {
+    padding: 30px 0px 42px;
+  }
+
+  #donation .donationDog {
+    height: 135px;
+    padding-top: 19px;
+  }
+
+  .donationInfo {
+    max-width: 94%;
+  }
+
+  #donation .wrapper {
+    padding-top: 43px;
+    padding-bottom: 30px;
+  }
+
+  .donationInfo span {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    /* identical to box height, or 24px */
+    letter-spacing: 0em;
+    display: flex;
+    align-items: center;
+  }
+
+  .bankCardNumber {
+    max-width: 92%;
+    margin: 0;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    /* identical to box height, or 17px */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+  }
+
+  .donationInfo p {
+    text-align: justify;
+  }
+
+  .contacts {
+    max-width: 92%;
+    padding-left: 0;
+    padding-bottom: 40px;
+    align-items: center;
+  }
+
+  footer h2 {
+    max-width: 93%;
+  }
+
+  .address {
+    max-width: 100%;
+    padding-left: 0;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    max-width: 388px;
+  }
+
+  .address h2 {
+    padding-left: 10px;
+    padding-bottom: 39px;
+    margin: 0;
+  }
+
+  footer .wrapper {
+    padding: 30px 10px 0;
+  }
+
+  .firstAddress {
+    padding-bottom: 40px;
+  }
+
+  .footerPuppy {
+    height: 269px;
   }
 }
