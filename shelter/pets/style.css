@@ -314,3 +314,43 @@ footer a:hover {
   max-width: 64%;
   padding-bottom: 30px;
 }
+
+@media (width < 768px) {
+  nav {
+    display: none;
+  }
+
+  .burger,
+  .burger::before,
+  .burger::after {
+    background-color:rgba(0, 0, 0, 1);
+    display: block;
+    height: 2px;
+    width: 30px;
+  }
+
+  .burger::before {
+    position: relative;
+    bottom: 10px;
+    content: '';
+  }
+
+  .burger::after {
+    content: '';
+    position: relative;
+    bottom: -8px;
+  }
+
+  .wrapper {
+    padding: 30px 10px 0;
+  }
+
+  header .wrapper {
+    padding: 30px 20px 0;
+  }
+
+  .burger {
+    margin-top: 29px;
+  }
+
+}
