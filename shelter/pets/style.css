@@ -459,11 +459,13 @@ footer a:hover {
   .pagination {
     padding-top: 43px;
     padding-bottom: 40px;
-    gap: 10px;
+    gap: 8px;
+    justify-content: space-between;
   }
 
   .arrows {
     gap: 8px;
+    height: 52px;
   }
   .contacts {
     max-width: 92%;
