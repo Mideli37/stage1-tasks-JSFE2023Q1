@@ -125,7 +125,7 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .card {
@@ -246,7 +246,8 @@ footer {
   overflow-y: hidden;
   height: 350px;
   background-size: cover;
-  background: url(../assets/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  background: url(../assets/noise_transparent@2x.png),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
 }
 
 footer .wrapper {
@@ -313,4 +314,205 @@ footer a:hover {
 .firstAddress {
   max-width: 64%;
   padding-bottom: 30px;
+}
+
+@media (width < 1280px) {
+  .wrapper {
+    padding: 30px 30px 0px 30px;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  h1 {
+    max-width: 69%;
+  }
+
+  .cardsWrapper {
+    padding-top: 0px;
+    gap: 29px 40px;
+  }
+
+  .card:nth-child(7),
+  .card:nth-child(8) {
+    display: none;
+  }
+  .pagination {
+    padding-top: 37px;
+    padding-bottom: 75px;
+  }
+  footer .wrapper {
+    flex-wrap: wrap;
+    height: unset;
+    overflow-y: unset;
+    justify-content: center;
+    padding-left: 36px;
+  }
+
+  footer {
+    flex-wrap: wrap;
+    height: unset;
+    overflow-y: unset;
+  }
+
+  .contacts {
+    max-width: 45%;
+    padding-left: 29px;
+    padding-bottom: 65px;
+  }
+
+  footer h2 {
+    padding-top: 0;
+    max-width: 90%;
+    padding-bottom: 39px;
+    margin: 0;
+  }
+
+  .address {
+    max-width: 48%;
+    padding-left: 20px;
+    padding-bottom: 65px;
+  }
+
+  .firstAddress {
+    max-width: 100%;
+    padding-bottom: 36px;
+  }
+
+  .footerPuppy {
+    display: block;
+    margin: auto;
+    position: unset;
+  }
+}
+
+@media (width < 768px) {
+  nav {
+    display: none;
+  }
+
+  .burger,
+  .burger::before,
+  .burger::after {
+    background-color: rgba(0, 0, 0, 1);
+    display: block;
+    height: 2px;
+    width: 30px;
+  }
+
+  .burger::before {
+    position: relative;
+    bottom: 10px;
+    content: '';
+  }
+
+  .burger::after {
+    content: '';
+    position: relative;
+    bottom: -8px;
+  }
+
+  .wrapper {
+    padding: 30px 10px 0;
+  }
+
+  header .wrapper {
+    padding: 30px 20px 0;
+  }
+
+  .burger {
+    margin-top: 29px;
+  }
+
+  h1 {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    /* or 32px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    /* color-dark-l */
+
+    color: #545454;
+    margin: 0;
+    padding-top: 12px;
+    max-width: 100%;
+  }
+
+  .cardsWrapper {
+    padding-top: 41px;
+  }
+
+  .card:nth-child(6),
+  .card:nth-child(5),
+  .card:nth-child(4) {
+    display: none;
+  }
+
+  .pagination {
+    padding-top: 43px;
+    padding-bottom: 40px;
+    gap: 10px;
+  }
+
+  .arrows {
+    gap: 8px;
+  }
+  .contacts {
+    max-width: 92%;
+    padding-left: 0;
+    padding-bottom: 40px;
+    align-items: center;
+  }
+
+  footer h2 {
+    max-width: 93%;
+  }
+
+  .address {
+    max-width: 100%;
+    padding-left: 0;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    max-width: 388px;
+  }
+
+  .address h2 {
+    padding-left: 10px;
+    padding-bottom: 39px;
+    margin: 0;
+  }
+
+  footer .wrapper {
+    padding: 30px 10px 0;
+  }
+
+  .firstAddress {
+    padding-bottom: 40px;
+  }
+
+  .footerPuppy {
+    height: 269px;
+  }
+  footer h2 {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    max-width: 100%;
+    align-self: unset;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
 }
