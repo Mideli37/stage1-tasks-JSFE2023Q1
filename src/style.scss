@@ -1,0 +1,29 @@
+.cell {
+  width: 50px;
+  height: 50px
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.field {
+  display: flex;
+  gap: 2px;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  gap: 2px
+}
+
+.closed {
+  background-color: grey;
+}
+
+.bomb {
+  background-color: aqua;
+  border: 1px red solid;
+}
