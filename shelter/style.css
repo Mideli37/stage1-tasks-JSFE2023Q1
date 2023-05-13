@@ -64,6 +64,10 @@ header a {
   letter-spacing: 0.1em;
   color: #ffffff;
 }
+
+.burgerMenu {
+  display: none;
+}
 nav ul {
   padding: 0;
   display: flex;
@@ -702,6 +706,68 @@ footer a:hover {
     display: none;
   }
 
+  .burgerModal {
+    background-color: #545454;
+    position: fixed;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 3;
+  }
+  .burgerMenu {
+    background: url(./assets/noise_transparent@2x.png),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%)
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    #211f20;
+  background-repeat: repeat;
+    position: absolute;
+    display: block;
+    left: 100%;
+    width: 350px;
+    height: 100vh;
+    z-index: 5;
+    bottom: 30px;
+    transition: 200ms;
+  }
+
+  .burgerMenu.active {
+    right: -100%;
+  }
+
+  .burgerMenu nav{
+    padding-top: 226px;
+    padding-right: 30px;
+    display: block;
+  }
+
+  .burgerWrapper .active {
+    transform: rotate(90deg);
+    transition: all 300ms;
+  }
+
+  .burgerMenu ul{
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 160%;
+    /* or 51px */
+    
+    
+    /* color-light-s */
+    
+    color: #FAFAFA;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.burgerWrapper {
+  cursor: pointer;
+  z-index: 10;
+  transition: all 300ms;
+}
   .burger,
   .burger::before,
   .burger::after {
@@ -709,6 +775,8 @@ footer a:hover {
     display: block;
     height: 2px;
     width: 30px;
+    z-index: 10;
+    cursor: pointer;
   }
 
   .burger::before {
@@ -757,6 +825,7 @@ footer a:hover {
     align-self: unset;
     position: relative;
     right: -21px;
+    z-index: 1;
   }
 
   #about .wrapper {

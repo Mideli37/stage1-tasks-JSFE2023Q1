@@ -46,3 +46,19 @@ console.log(`
    на странице Pets: +4
    При ширине экрана меньше 768px на обеих страницах меню в хедере скрывается, появляется иконка бургер-меню: +4
    Верстка обеих страниц валидная: +8`);
+
+
+// burger 
+const burgerIcon = document.querySelector('.burgerWrapper')
+function burgerToggle() {
+   const nav = document.querySelector('.burgerMenu');
+   if (!nav.classList.contains('active')) {
+     nav.classList.add('active')
+     document.querySelector('.burgerModal').style.display = 'unset';
+   } else {
+      document.querySelector('.burgerModal').style.display = 'none';
+      nav.classList.remove('active')
+   }
+}
+ 
+burgerIcon.addEventListener('click', burgerToggle)
