@@ -22,10 +22,12 @@ class App {
   constructor() {
     this.cells = [];
     this.buildLayout();
-    const game = new Game(this.cells);
+    this.game = new Game(this.cells);
+    this.initReset();
   }
 
   buildField(parent) {
+    this.cells = [];
     for (let i = 1; i <= 10; i += 1) {
       const row = addEl('div', parent, 'row');
       for (let j = 1; j <= 10; j += 1) {
@@ -36,9 +38,31 @@ class App {
   }
 
   buildLayout() {
-    const main = addEl('main', document.body, 'main');
-    const field = addEl('div', main, 'field');
-    this.buildField(field);
+    this.main = addEl('main', document.body, 'main');
+    this.fieldWrapper = addEl('div', this.main, 'field-wrapper');
+    this.field = addEl('div', this.fieldWrapper, 'field');
+    this.buildField(this.field);
+    this.buttons = addEl('div', this.main, 'buttons');
+    this.resetButton = addEl('button', this.buttons, 'reset', 'New Game');
+  }
+
+  deleteField() {
+    this.field.remove();
+  }
+
+  resetGame() {
+    this.deleteField();
+    this.field = addEl('div', this.fieldWrapper, 'field');
+    this.buildField(this.field);
+    console.log('vza');
+    this.game = new Game(this.cells);
+  }
+
+  initReset() {
+    this.resetButton.addEventListener('click', () => {
+      this.resetGame();
+      console.log('reset');
+    });
   }
 }
 

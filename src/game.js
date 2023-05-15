@@ -3,30 +3,44 @@
 
 export class Game {
   constructor(cells) {
+    // this.field = field;
     this.cells = cells;
-    // this.openCell();
     this.detectFirstClick();
-    this.countClicks();
+    this.clickCell();
   }
 
-  /* openCell() {
-    this.cells.forEach((cell) => {
-      cell.element.addEventListener('click', () => {
-        console.log(cell);
-        cell.openCell();
-      });
-    });
-  } */
+  safeCells = 0;
 
-  countClicks() {
+  clickCell() {
     this.cells.forEach((cell) => {
       cell.element.addEventListener('click', () => {
         if (cell.element.classList.contains('closed')) {
-          this.clicks += 1;
-          console.log(this.clicks);
+          this.countClicks(cell);
+          cell.openCell();
+          this.safeCells += 1;
+          if (cell.element.classList.contains('bomb')) {
+            console.error('Game over!');
+            this.openAllField();
+          } else if (this.safeCells === 90) {
+            console.log('You Win!');
+            this.openAllField();
+          }
         }
       });
     });
+  }
+
+  openAllField() {
+    this.cells.forEach((cell) => {
+      cell.element.classList.remove('closed');
+    });
+  }
+
+  countClicks(cell) {
+    if (cell.element.classList.contains('closed')) {
+      this.clicks += 1;
+      console.log(this.clicks);
+    }
   }
 
   getCell(cord1, cord2) {
@@ -81,21 +95,30 @@ export class Game {
     this.cells.forEach((cell) => {
       cell.element.addEventListener('click', () => {
         if (this.clicks === 0) {
-          this.checkCell(cell, 10);
+          this.generateBombs(10);
         }
         console.warn(cell);
       });
     });
   }
 
-  /*  checkCell(cell, bombsCount) {
+  /*   checkCell(cell, bombsCount) {
     this.generateBombs(bombsCount);
-     (cell.bombCount !== 0) {
+    while (cell.bombCount !== 0) {
+      this.app.resetGame();
       this.generateBombs(bombsCount);
     }
   } */
 
-  // resetGame() {}
+  openEmptyCell(cell) {
+    const nearCells = this.findNearCells(cell);
+    nearCells.forEach((nearCell) => {
+      nearCell.element.classList.remove('closed');
+      if (cell.bombCount === 0) {
+        this.openEmptyCell(nearCell);
+      }
+    });
+  }
 
   clicks = 0;
 
